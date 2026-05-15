@@ -1,5 +1,6 @@
 # chance-of-rain
-Predict the chance of rain based on your location, using the Tomorrow.i.o API. ทำนายโอกาสฝนตกตามพิกัดที่คุณอยุ่ โดยดึงจาก เอพีไอ ของ ทูมอโรดอทไอโอ
+Predict the chance of rain based on your location, using the Tomorrow.i.o API. 
+ทำนายโอกาสฝนตกตามพิกัดที่คุณอยุ่ โดยดึงจาก เอพีไอ ของ ทูมอโรดอทไอโอ
 
 # 🌦️ Rainie Pastel Forecast ✨
 **"A Minimalist & Cute Real-time Rain Probability Tracker"**
@@ -63,3 +64,8 @@ For Thai
 
 ### 📄 License
 This project is licensed under the **MIT License**.
+
+---
+> **🌱 Creator's Note:** This is my very first Public Repository! I am a beginner coder on a journey to learn and grow. If you have any suggestions or feedback on how I can improve this project, please feel free to share. Thank you! 🌸
+>
+> *(นี่คือ Public Repository แรกในชีวิตของฉัน! ฉันกำลังเริ่มต้นเรียนรู้การเขียนโค้ด หากมีข้อแนะนำอะไรยินดีรับฟังเสมอจ้า)*
