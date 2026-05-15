@@ -4,95 +4,7 @@
     <meta charset="UTF-8">
     <title>พยากรณ์ฝนฟรุ่งฟริ้ง 🌸</title>
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #fff0f5; /* LavenderBlush */
-            font-family: 'Mali', cursive;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
-            color: #d147a3;
-            margin: 0;
-        }
-
-        /* ปุ่มสลับภาษาขวาบน */
-        .lang-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 5px;
-        }
-        .lang-btn {
-            background: white;
-            border: 2px solid #ffb6c1;
-            color: #ff69b4;
-            padding: 5px 12px;
-            border-radius: 15px;
-            cursor: pointer;
-            font-family: 'Mali', cursive;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
-        }
-        .lang-btn.active {
-            background: #ff69b4;
-            color: white;
-            border-color: #ff69b4;
-        }
-        .lang-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.5);
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 30px;
-            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5);
-            border: 4px dashed #ffb6c1;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-        }
-
-        h1 { margin-bottom: 10px; }
-        input {
-            width: 80%;
-            padding: 12px;
-            border: 2px solid #ffb6c1;
-            border-radius: 20px;
-            outline: none;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-        button#fetchBtn {
-            background: #ff69b4;
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: transform 0.2s;
-            font-family: 'Mali', cursive;
-        }
-        button#fetchBtn:hover { transform: scale(1.1); background: #ff1493; }
-        
-        table {
-            width: 100%;
-            margin-top: 30px;
-            border-collapse: collapse;
-            display: none; 
-        }
-        th { background: #ffb6c1; color: white; padding: 10px; border-radius: 10px 10px 0 0; }
-        td { padding: 10px; border-bottom: 1px solid #ffe4e1; }
-        tr:nth-child(even) { background: #fff5f7; }
-        .rain-high { color: #ff0000; font-weight: bold; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -102,9 +14,31 @@
 </div>
 
 <div class="container">
-    <h1 id="title">🌦️ พยากรณ์ฝนล่วงหน้า ✨</h1>
-    <p id="desc">ใส่พิกัด (Lat, Long) เพื่อดูความฟรุ่งฟริ้ง</p>
-    <input type="text" id="coords" placeholder="เช่น 13.8100, 100.5788" value="13.810095932650473, 100.57882292952273">
+    <h1 id="title">🌦️ พยากรณ์ฝนฟรุ่งฟริ้ง ✨</h1>
+    
+    <div class="how-to-box">
+        <button class="how-to-btn" onclick="toggleHowTo()">
+            <span id="how-to-title">❓ วิธีใช้งาน (How to use)</span>
+        </button>
+        <div class="how-to-content" id="howToContent">
+            <p id="how-to-text">
+                1. สมัครใช้งานที่ <a href="https://app.tomorrow.io/signin" target="_blank">Tomorrow.io</a><br>
+                2. ไปที่หน้า <a href="https://app.tomorrow.io/development/keys" target="_blank">API Keys</a><br>
+                3. ก๊อปปี้ <b>My API Key</b> มาใส่ในช่องด้านล่างจ้า (ใส่ครั้งเดียวจบ!)
+            </p>
+        </div>
+    </div>
+
+    <!-- ส่วนของ API Key ที่จะถูกซ่อนถ้ามีข้อมูลอยู่แล้ว -->
+    <div id="keySection">
+        <input type="password" id="apiKey" class="key-input" placeholder="วาง API Key ตรงนี้เลยจ้า">
+    </div>
+    
+    <!-- ปุ่มสำหรับกดแสดงช่องแก้ Key กรณีต้องการเปลี่ยน -->
+    <button id="changeKeyBtn" style="display:none;" onclick="showKeyInput()">🔑 Change API Key</button>
+
+    <input type="text" id="coords" placeholder="พิกัด Lat, Long" value="13.8100959, 100.5788229">
+    
     <br>
     <button id="fetchBtn" onclick="getRainForecast()">ดูพยากรณ์เลยยย 💖</button>
 
@@ -119,97 +53,6 @@
     </table>
 </div>
 
-<script>
-let currentLang = 'th';
-
-const translations = {
-    th: {
-        title: "🌦️ พยากรณ์ฝนล่วงหน้า ✨",
-        desc: "ใส่พิกัด (Lat, Long) เพื่อดูความฟรุ่งฟริ้ง",
-        placeholder: "เช่น 13.8100, 100.5788",
-        btn: "ดูพยากรณ์เลยยย 💖",
-        thTime: "ระยะเวลา",
-        thProb: "โอกาสฝนตก (%)",
-        unitMin: "นาทีข้างหน้า",
-        unitHr: "ชม. ข้างหน้า",
-        error: "อุ๊ย! ดึงข้อมูลไม่ได้ ลองเช็ค API Key หรือพิกัดดูอีกทีนะจ๊ะ 🎀"
-    },
-    en: {
-        title: "🌦️ Rain Forecast ✨",
-        desc: "Enter coordinates (Lat, Long) for magic",
-        placeholder: "e.g. 13.8100, 100.5788",
-        btn: "Check Forecast 💖",
-        thTime: "Duration",
-        thProb: "Rain Chance (%)",
-        unitMin: "mins later",
-        unitHr: "hrs later",
-        error: "Oops! Data fetch failed. Please check your API Key or coordinates 🎀"
-    }
-};
-
-function toggleLang(lang) {
-    currentLang = lang;
-    
-    // อัปเดตปุ่มสลับภาษา
-    document.getElementById('btn-th').classList.toggle('active', lang === 'th');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-
-    // อัปเดตข้อความในหน้าเว็บ
-    document.getElementById('title').innerText = translations[lang].title;
-    document.getElementById('desc').innerText = translations[lang].desc;
-    document.getElementById('coords').placeholder = translations[lang].placeholder;
-    document.getElementById('fetchBtn').innerText = translations[lang].btn;
-    document.getElementById('th-time').innerText = translations[lang].thTime;
-    document.getElementById('th-prob').innerText = translations[lang].thProb;
-
-    // ถ้ามีตารางอยู่แล้ว ให้รีเฟรชตารางด้วย (ถ้าต้องการให้เปลี่ยนทันที)
-    if(document.getElementById('resultTable').style.display === 'table') {
-        getRainForecast();
-    }
-}
-
-async function getRainForecast() {
-    const apiKey = 'c6uLjMIqyfwEwcTdnbNIIAlE626pCoee'; // อย่าลืมใส่ Key ของคุณนะครับ
-    const coords = document.getElementById('coords').value.replace(/\s+/g, '');
-    const url = `https://api.tomorrow.io/v4/weather/forecast?location=${coords}&apikey=${apiKey}`;
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        
-        const minutely = data.timelines.minutely;
-        const hourly = data.timelines.hourly;
-        
-        const targets = [5, 10, 20, 30, 60, 120, 180, 240, 300, 360];
-        let html = '';
-
-        targets.forEach(min => {
-            let prob = 0;
-            let label = "";
-            
-            if (min <= 30) {
-                prob = minutely[min].values.precipitationProbability;
-                label = `${min} ${translations[currentLang].unitMin}`;
-            } else {
-                const hrIndex = (min / 60);
-                prob = hourly[hrIndex].values.precipitationProbability;
-                label = `${min/60} ${translations[currentLang].unitHr}`;
-            }
-
-            html += `<tr>
-                <td>${label}</td>
-                <td class="${prob > 50 ? 'rain-high' : ''}">${prob} % 💧</td>
-            </tr>`;
-        });
-
-        document.getElementById('resultBody').innerHTML = html;
-        document.getElementById('resultTable').style.display = 'table';
-
-    } catch (error) {
-        alert(translations[currentLang].error);
-    }
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
