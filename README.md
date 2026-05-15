@@ -22,7 +22,7 @@ To use this app, you will need your own API Key from Tomorrow.io (it's free!).
 
 1.  **Get your API Key:** Sign up at [Tomorrow.io](https://app.tomorrow.io/signin).
 2.  **Find your Key:** Navigate to the [API Keys Dashboard](https://app.tomorrow.io/development/keys).
-3.  **Run the App:** Open the live link: `[https://aekarita.github.io/chance-of-rain/]`
+3. Run the App: Open the live link: [https://aekarita.github.io/chance-of-rain/](https://aekarita.github.io/chance-of-rain/)
 4.  **Setup:** Paste your key into the "API Key" field (the app will remember it for your next visit!).
 5.  **Forecast:** Enter your Latitude and Longitude and hit the button! 💖
 
@@ -50,7 +50,7 @@ For Thai
 * **Cute UI:** ดีไซน์ธีมสีชมพูพาสเทล ฟรุ่งฟริ้ง สบายตา (ใช้ฟอนต์ Mali สุดน่ารัก)
 
 ### 🚀 Getting Started (เริ่มใช้งาน)
-คุณสามารถเข้าใช้งานผ่านหน้าเว็บได้ทันทีที่: `[https://aekarita.github.io/chance-of-rain/]`
+คุณสามารถเข้าใช้งานผ่านหน้าเว็บได้ทันทีที่: [https://aekarita.github.io/chance-of-rain/](https://aekarita.github.io/chance-of-rain/)
 
 **วิธีใช้งาน:**
 1. สมัครเอา API Key ฟรีที่ [Tomorrow.io](https://app.tomorrow.io/signin)
