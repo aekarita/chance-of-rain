@@ -31,11 +31,17 @@ const translations = {
 
 window.onload = function() {
     const savedKey = localStorage.getItem('myRainApiKey');
+    const savedCoords = localStorage.getItem('myRainCoords');
+
     if (savedKey) {
         document.getElementById('apiKey').value = savedKey;
         // ถ้ามี Key อยู่แล้ว ให้ซ่อนส่วนกรอก และโชว์ปุ่ม Change แทน
         document.getElementById('keySection').style.display = 'none';
         document.getElementById('changeKeyBtn').style.display = 'inline-block';
+    }
+
+    if (savedCoords) {
+        document.getElementById('coords').value = savedCoords;
     }
 };
 
@@ -73,7 +79,9 @@ async function getRainForecast() {
         return;
     }
 
+    // บันทึกทั้ง Key และ Coords ลง localStorage
     localStorage.setItem('myRainApiKey', apiKey);
+    localStorage.setItem('myRainCoords', coords);
     
     // หลังจากบันทึกแล้ว ซ่อนช่องใส่เลย
     document.getElementById('keySection').style.display = 'none';

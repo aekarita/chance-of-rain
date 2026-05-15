@@ -37,7 +37,7 @@
     <!-- ปุ่มสำหรับกดแสดงช่องแก้ Key กรณีต้องการเปลี่ยน -->
     <button id="changeKeyBtn" style="display:none;" onclick="showKeyInput()">🔑 Change API Key</button>
 
-    <input type="text" id="coords" placeholder="พิกัด Lat, Long" value="13.8100959, 100.5788229">
+    <input type="text" id="coords" placeholder="พิกัด Lat, Long Ex. 19.8600959, 99.5988229">
     
     <br>
     <button id="fetchBtn" onclick="getRainForecast()">ดูพยากรณ์เลยยย 💖</button>
@@ -54,7 +54,6 @@
     
 </div>
 
-<script src="script.js"></script>
 <div style="position: fixed; bottom: 15px; right: 15px; z-index: 1000; opacity: 0.7; transition: opacity 0.3s;" 
      onmouseover="this.style.opacity='1'" 
      onmouseout="this.style.opacity='0.7'">
@@ -62,5 +61,6 @@
         <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Faekarita.github.io%2Fchance-of-rain%2F&label=Visit&icon=github&color=%23ff69b4&message=&style=flat&tz=localtime">
     </a>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
