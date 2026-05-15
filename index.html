@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>พยากรณ์ฝนฟรุ่งฟริ้ง 🌸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #fff0f5; /* LavenderBlush */
+            font-family: 'Mali', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            color: #d147a3;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5);
+            border: 4px dashed #ffb6c1;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 { margin-bottom: 10px; }
+        input {
+            width: 80%;
+            padding: 12px;
+            border: 2px solid #ffb6c1;
+            border-radius: 20px;
+            outline: none;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        button {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: scale(1.1); background: #ff1493; }
+        
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            display: none; /* ซ่อนไว้ก่อนกดปุ่ม */
+        }
+        th { background: #ffb6c1; color: white; padding: 10px; border-radius: 10px 10px 0 0; }
+        td { padding: 10px; border-bottom: 1px solid #ffe4e1; }
+        tr:nth-child(even) { background: #fff5f7; }
+        .rain-high { color: #ff0000; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌦️ พยากรณ์ฝนล่วงหน้า ✨</h1>
+    <p>ใส่พิกัด (Lat, Long) เพื่อดูความฟรุ่งฟริ้ง</p>
+    <input type="text" id="coords" placeholder="เช่น 13.8086, 100.5780" value="13.808679, 100.578029">
+    <br>
+    <button onclick="getRainForecast()">ดูพยากรณ์เลยยย 💖</button>
+
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>ระยะเวลา</th>
+                <th>โอกาสฝนตก (%)</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+    </table>
+</div>
+
+<script>
+async function getRainForecast() {
+    const apiKey = 'c6uLjMIqyfwEwcTdnbNIIAlE626pCoee'; // ใส่ API Key ของ Tomorrow.io ที่นี่
+    const coords = document.getElementById('coords').value.replace(/\s+/g, '');
+    const url = `https://api.tomorrow.io/v4/weather/forecast?location=${coords}&apikey=${apiKey}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        const minutely = data.timelines.minutely;
+        const hourly = data.timelines.hourly;
+        
+        // ช่วงเวลาที่ต้องการดึง (นาทีที่ 5, 10, 20, 30 และ ชั่วโมงที่ 1-6)
+        const targets = [5, 10, 20, 30, 60, 120, 180, 240, 300, 360];
+        let html = '';
+
+        targets.forEach(min => {
+            let prob = 0;
+            let label = min < 60 ? `${min} นาที` : `${min/60} ชม.`;
+            
+            if (min <= 30) {
+                // ดึงจาก minutely (Tomorrow.io ให้มา 60 นาทีแรก)
+                prob = minutely[min].values.precipitationProbability;
+            } else {
+                // ดึงจาก hourly
+                const hrIndex = (min / 60);
+                prob = hourly[hrIndex].values.precipitationProbability;
+            }
+
+            html += `<tr>
+                <td>${label}ข้างหน้า</td>
+                <td class="${prob > 50 ? 'rain-high' : ''}">${prob} % 💧</td>
+            </tr>`;
+        });
+
+        document.getElementById('resultBody').innerHTML = html;
+        document.getElementById('resultTable').style.display = 'table';
+
+    } catch (error) {
+        alert('อุ๊ย! ดึงข้อมูลไม่ได้ ลองเช็ค API Key หรือพิกัดดูอีกทีนะจ๊ะ 🎀');
+    }
+}
+</script>
+
+</body>
+</html>
