@@ -64,7 +64,7 @@
 <div class="container">
     <h1>🌦️ พยากรณ์ฝนล่วงหน้า ✨</h1>
     <p>ใส่พิกัด (Lat, Long) เพื่อดูความฟรุ่งฟริ้ง</p>
-    <input type="text" id="coords" placeholder="เช่น 13.8086, 100.5780" value="13.808679, 100.578029">
+    <input type="text" id="coords" placeholder="เช่น 13.810095932650473, 100.57882292952273" value="13.810095932650473, 100.57882292952273">
     <br>
     <button onclick="getRainForecast()">ดูพยากรณ์เลยยย 💖</button>
 
@@ -81,7 +81,7 @@
 
 <script>
 async function getRainForecast() {
-    const apiKey = 'c6uLjMIqyfwEwcTdnbNIIAlE626pCoee'; // ใส่ API Key ของ Tomorrow.io ที่นี่
+    const apiKey = 'API Key'; // ใส่ API Key ของ Tomorrow.io ที่นี่
     const coords = document.getElementById('coords').value.replace(/\s+/g, '');
     const url = `https://api.tomorrow.io/v4/weather/forecast?location=${coords}&apikey=${apiKey}`;
 
