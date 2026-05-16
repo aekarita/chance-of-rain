@@ -1,3 +1,6 @@
+v0.9921
+
+=======  
 v0.9920 - 11:25 PM 5/15/2026
 - Coor can remember ทำให้ช่องพิกัดจดจำตำแหน่งได้
 - add Pre ExamPic to readme เตรียมใส่ภาพในreadme
