@@ -1,6 +1,7 @@
 # chance-of-rain
 Predict the chance of rain based on your location, using the Tomorrow.i.o API. 
 
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Faekarita%2Fchance-of-rain&label=&icon=github&color=%23cfe2ff)
 
 ## Preview ✨
 
