@@ -1,6 +1,8 @@
 # chance-of-rain
 # 🌦️ Rainie Pastel Forecast ✨
-Predict the chance of rain based on your location, using the Tomorrow.i.o API. 
+**"A Minimalist & Cute Real-time Rain Probability Tracker"**
+
+Rainie Pastel is a lightweight, web-based tool designed to provide highly accurate rain forecasts base on your location using the Tomorrow.io API. Built with a "Pastel Pink" aesthetic, it offers a user-friendly experience for those who want to stay dry in style.
 
 ![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Faekarita%2Fchance-of-rain&label=&icon=github&color=%23cfe2ff)
 
@@ -13,10 +15,6 @@ Result
 <br>
 <img width="617" height="928" alt="Image" src="https://github.com/user-attachments/assets/19ece31e-58fb-4a51-bdbf-a293655a75ec" />
 <br>
-# 🌦️ Rainie Pastel Forecast ✨
-**"A Minimalist & Cute Real-time Rain Probability Tracker"**
-
-Rainie Pastel is a lightweight, web-based tool designed to provide highly accurate rain forecasts using the Tomorrow.io API. Built with a "Pastel Pink" aesthetic, it offers a user-friendly experience for those who want to stay dry in style.
 
 ---
 
@@ -46,8 +44,9 @@ To use this app, you will need your own API Key from Tomorrow.io (it's free!).
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
-*Created with 💖 for my first Public Repo!*
--------
+> **🌱 Creator's Note:** This is my very first Public Repository! I am a beginner coder on a journey to learn and grow. If you have any suggestions or feedback on how I can improve this project, please feel free to share. Thank you! 🌸
+---
+
 For Thai
 
 **"พยากรณ์ฝนฟรุ่งฟริ้ง"** - เว็บเช็คโอกาสฝนตกแบบ Real-time ที่แม่นยำที่สุดในสามโลก! 💖
@@ -85,6 +84,5 @@ For Thai
 This project is licensed under the **MIT License**.
 
 ---
-> **🌱 Creator's Note:** This is my very first Public Repository! I am a beginner coder on a journey to learn and grow. If you have any suggestions or feedback on how I can improve this project, please feel free to share. Thank you! 🌸
->
+
 > *(Repo แรกเจ้าค่ะ! เพิ่งหัดเขียนโค้ด มีอะไรแนะนำได้น้า^^")*
