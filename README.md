@@ -1,16 +1,18 @@
 # chance-of-rain
+# 🌦️ Rainie Pastel Forecast ✨
 Predict the chance of rain based on your location, using the Tomorrow.i.o API. 
 
 ![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Faekarita%2Fchance-of-rain&label=&icon=github&color=%23cfe2ff)
 
 ## Preview ✨
-
-<br>
-EN
 <br>
 <img width="700" height="526" alt="Image" src="https://github.com/user-attachments/assets/1aa9487e-db9c-441c-b3d0-bf18098c1bb7" />
 <br>
-
+<br>
+Result
+<br>
+<img width="617" height="928" alt="Image" src="https://github.com/user-attachments/assets/19ece31e-58fb-4a51-bdbf-a293655a75ec" />
+<br>
 # 🌦️ Rainie Pastel Forecast ✨
 **"A Minimalist & Cute Real-time Rain Probability Tracker"**
 
@@ -47,14 +49,18 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 *Created with 💖 for my first Public Repo!*
 -------
 For Thai
-# 🌦️ Rainie Pastel Forecast ✨
+
 **"พยากรณ์ฝนฟรุ่งฟริ้ง"** - เว็บเช็คโอกาสฝนตกแบบ Real-time ที่แม่นยำที่สุดในสามโลก! 💖
 ทำนายโอกาสฝนตกตามพิกัดที่คุณอยุ่ โดยดึงจาก เอพีไอ ของ ทูมอโรดอทไอโอ
 ---
-## Preview ✨
+## ตัวอย่าง ✨
 <br>
 <img width="705" height="513" alt="Image" src="https://github.com/user-attachments/assets/34a47c6a-122a-46ec-b97f-beb393169f86" />
 <br>
+<br>
+แสดงผล
+<br>
+<img width="617" height="928" alt="Image" src="https://github.com/user-attachments/assets/cdd11e66-64fa-476c-82e9-837924ff1f65" />
 
 ### 🌸 Features (ทำอะไรได้บ้าง?)
 * **Hyperlocal Accuracy:** ดึงข้อมูลพยากรณ์ละเอียดระดับ 5 นาที ยาวไปถึง 6 ชั่วโมงข้างหน้า
@@ -81,4 +87,4 @@ This project is licensed under the **MIT License**.
 ---
 > **🌱 Creator's Note:** This is my very first Public Repository! I am a beginner coder on a journey to learn and grow. If you have any suggestions or feedback on how I can improve this project, please feel free to share. Thank you! 🌸
 >
-> *(นี่คือ Public Repository แรกในชีวิตของฉัน! ฉันกำลังเริ่มต้นเรียนรู้การเขียนโค้ด หากมีข้อแนะนำอะไรยินดีรับฟังเสมอจ้า)*
+> *(Repo แรกเจ้าค่ะ! เพิ่งหัดเขียนโค้ด มีอะไรแนะนำได้น้า^^")*
