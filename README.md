@@ -2,6 +2,17 @@
 Predict the chance of rain based on your location, using the Tomorrow.i.o API. 
 ทำนายโอกาสฝนตกตามพิกัดที่คุณอยุ่ โดยดึงจาก เอพีไอ ของ ทูมอโรดอทไอโอ
 
+## Preview ✨
+TH
+<a href="https://github.com/user-attachments/assets/7bd3b022-8716-4481-ae58-7c88150f9946" target="_blank">
+  <img src="https://github.com/user-attachments/assets/7bd3b022-8716-4481-ae58-7c88150f9946" width="400" alt="Preview 1">
+</a>
+
+ENG
+<a href="https://github.com/user-attachments/assets/9f3155e9-5d7a-449d-840f-78a0d8f929ad" target="_blank">
+  <img src="https://github.com/user-attachments/assets/9f3155e9-5d7a-449d-840f-78a0d8f929ad" width="400" alt="Preview 2">
+</a>
+
 # 🌦️ Rainie Pastel Forecast ✨
 **"A Minimalist & Cute Real-time Rain Probability Tracker"**
 
