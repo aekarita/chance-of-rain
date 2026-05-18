@@ -1,10 +1,11 @@
-v0.9921
-
+v0.99201 21:34 18/5/2026
+- add how to 4.  เพิ่ม how to ข้อที่ 4 ทั้งใน index.html และ script ตรงเปลี่ยนภาษา
+- edit a liitle stlye uesless แก้ไข stlye ที่ไม่ได้ใช้เล็กน้อย
+- แก้ไขคำว่า "ฟรุ่งฟริ้ง" เป็น "ฟรุ้งฟริ้ง"
 =======  
 v0.9920 - 11:25 PM 5/15/2026
 - Coor can remember ทำให้ช่องพิกัดจดจำตำแหน่งได้
 - add Pre ExamPic to readme เตรียมใส่ภาพในreadme
-- 
 =======
 v0.9914 - 10:15 PM 5/15/2026
 -1st Release

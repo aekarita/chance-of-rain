@@ -4,7 +4,7 @@ const translations = {
     th: {
         title: "🌦️ พยากรณ์ฝนฟรุ่งฟริ้ง ✨",
         howTitle: "❓ วิธีใช้งาน (How to use)",
-        howText: "1. สมัครใช้งานที่ <a href='https://app.tomorrow.io/signin' target='_blank'>Tomorrow.io</a><br>2. ไปที่หน้า <a href='https://app.tomorrow.io/development/keys' target='_blank'>API Keys</a><br>3. ก๊อปปี้ <b>My API Key</b> มาใส่ช่องล่าง (ใส่ครั้งเดียวจบ!)",
+        howText: "1. สมัครใช้งานที่ <a href='https://app.tomorrow.io/signin' target='_blank'>Tomorrow.io</a><br>2. ไปที่หน้า <a href='https://app.tomorrow.io/development/keys' target='_blank'>API Keys</a><br>3. ก๊อปปี้ <b>My API Key</b> มาใส่ช่องล่าง (ใส่ครั้งเดียวจบ!)<br>4. ใส่พิกัดละติจูด ลองจิจูด แล้วกดดูพยากรณ์ได้เลยจ้า!",
         keyPlace: "วาง API Key ตรงนี้เลยจ้า",
         coordPlace: "พิกัด Lat, Long",
         btn: "ดูพยากรณ์เลยยย 💖",
@@ -17,7 +17,7 @@ const translations = {
     en: {
         title: "🌦️ Rain Forecast ✨",
         howTitle: "❓ How to use",
-        howText: "1. Register at <a href='https://app.tomorrow.io/signin' target='_blank'>Tomorrow.io</a><br>2. Go to <a href='https://app.tomorrow.io/development/keys' target='_blank'>API Keys</a><br>3. Copy <b>My API Key</b> and paste below (One-time setup!)",
+        howText: "1. Register at <a href='https://app.tomorrow.io/signin' target='_blank'>Tomorrow.io</a><br>2. Go to <a href='https://app.tomorrow.io/development/keys' target='_blank'>API Keys</a><br>3. Copy <b>My API Key</b> and paste below (One-time setup!)<br>4. Enter your Lat, Long coordinates and click check!",
         keyPlace: "Paste your API Key here",
         coordPlace: "Coordinates Lat, Long",
         btn: "Check Forecast 💖",
