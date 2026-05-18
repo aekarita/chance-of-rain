@@ -71,9 +71,11 @@ For Thai
 คุณสามารถเข้าใช้งานผ่านหน้าเว็บได้ทันทีที่: [https://aekarita.github.io/chance-of-rain/](https://aekarita.github.io/chance-of-rain/)
 
 **วิธีใช้งาน:**
-1. สมัครเอา API Key ฟรีที่ [Tomorrow.io](https://app.tomorrow.io/signin)
-2. นำ Key มาวางในช่อง "My API Key" 
-3. ใส่พิกัด (Lat, Long) แล้วกดปุ่มดูพยากรณ์ได้เลย!
+1. **สมัครรับ API Key:** ลงทะเบียนใช้งานได้ที่ [Tomorrow.io](https://app.tomorrow.io/signin)
+2. **คัดลอก API Key:** ไปที่หน้า [API Keys Dashboard](https://app.tomorrow.io/development/keys) เพื่อก๊อปปี้ Key มาใช้งาน
+3. **เปิดใช้งานแอป:** คลิกที่ลิงก์นี้เพื่อเข้าสู่เว็บไซต์: https://aekarita.github.io/chance-of-rain/
+4. **ตั้งค่าเริ่มต้น:** วาง Key ที่ก๊อปปี้มาลงในช่อง "API Key" (ระบบจะจำไว้ให้โดยอัตโนมัติ เปิดใช้งานครั้งต่อไปไม่ต้องพิมพ์ซ้ำแล้วจ้า!)
+5. **ดูพยากรณ์ฝน:** ใส่พิกัด Latitude และ Longitude ของคุณ แล้วกดปุ่มลุยได้เลย! 💖
 
 ### 🛠️ Tech Stack (สร้างด้วยอะไร?)
 * **HTML5 / CSS3** (Custom UI Design)
