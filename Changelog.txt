@@ -1,3 +1,8 @@
+=======
+v0.99205 20:14 19/05/2026
+- Can memo last use language จำภาษาที่ใช้งานล่าสุดได้แล้ว
+- Add how to get coor เพิ่มวิธีหาพิกัดจากกูเกิ้ล
+=======
 v0.99201 21:34 18/5/2026
 - add how to 4.  เพิ่ม how to ข้อที่ 4 ทั้งใน index.html และ script ตรงเปลี่ยนภาษา
 - edit a liitle stlye uesless แก้ไข stlye ที่ไม่ได้ใช้เล็กน้อย
