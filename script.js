@@ -32,6 +32,7 @@ const translations = {
 window.onload = function() {
     const savedKey = localStorage.getItem('myRainApiKey');
     const savedCoords = localStorage.getItem('myRainCoords');
+    const savedLang = localStorage.getItem('myRainLang'); // ดึงภาษาที่เคยจำไว้
 
     if (savedKey) {
         document.getElementById('apiKey').value = savedKey;
@@ -42,6 +43,10 @@ window.onload = function() {
 
     if (savedCoords) {
         document.getElementById('coords').value = savedCoords;
+    }
+
+    if (savedLang) {
+        toggleLang(savedLang); // ถ้าเคยจำภาษาไว้ ให้เปลี่ยนเป็นภาษานั้นทันที
     }
 };
 
@@ -57,6 +62,7 @@ function toggleHowTo() {
 
 function toggleLang(lang) {
     currentLang = lang;
+    localStorage.setItem('myRainLang', lang); //  สั่งให้จำภาษาล่าสุดลงเครื่องทันที
     document.getElementById('btn-th').classList.toggle('active', lang === 'th');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     
