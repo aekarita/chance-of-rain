@@ -137,3 +137,41 @@ th { background: var(--soft-pink); color: white; padding: 10px; border-radius: 1
 td { padding: 10px; border-bottom: 1px solid #ffe4e1; }
 tr:nth-child(even) { background: #fff5f7; }
 .rain-high { color: #ff0000; font-weight: bold; }
+
+.footer-links {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.footer-links:hover {
+    opacity: 1;
+}
+
+.small-btn {
+    background: white;
+    border: 2px solid var(--primary-pink);
+    color: var(--primary-pink);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.small-btn:hover {
+    background: var(--primary-pink);
+    color: white;
+}
+
+.hit-counter {
+    margin-top: 5px;
+}
