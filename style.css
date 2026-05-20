@@ -187,3 +187,11 @@ tr:nth-child(even) { background: #fff5f7; }
 .octocat-icon:hover {
     transform: scale(1.8); /* ขยายเล็กน้อยเวลาเอาเมาส์ไปชี้ */
 }
+
+.version-tag {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;       /* กำหนดให้อยู่มุมซ้าย */
+    font-family: 'Mali', cursive;
+    pointer-events: none; /* ป้องกันไม่ให้เมาส์คลิกโดนถ้าเผลอไปกด */
+}
