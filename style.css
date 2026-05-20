@@ -205,19 +205,19 @@ tr:nth-child(even) { background: #fff5f7; }
     }
 
     .container {
-        width: 95%; /* ขยายความกว้างให้เต็มจอมากขึ้น */
+        width: 88%; /* ขยายความกว้างให้เต็มจอมากขึ้น */
         padding: 15px;
-        margin-bottom: 80px; /* เว้นพื้นที่ด้านล่างไว้ให้ปุ่มไม่ไปทับเนื้อหา */
+        margin-bottom: 160px; /* เว้นพื้นที่ด้านล่างไว้ให้ปุ่มไม่ไปทับเนื้อหา */
     }
 
     /* ปรับแต่งตำแหน่ง Footer ให้ขยับขึ้นมาเล็กน้อยถ้าจอแคบมาก */
     .footer-links {
-        bottom: 40px; 
+        bottom: 3px; 
         right: 10px;
     }
 
     .version-tag {
-        bottom: 10px;
+        bottom: 3px;
         left: 10px;
     }
 }

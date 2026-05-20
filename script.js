@@ -2,7 +2,7 @@ let currentLang = 'th';
 
 const translations = {
     th: {
-        title: "🌦️ พยากรณ์ฝนฟรุ่งฟริ้ง ✨",
+        title: "🌦️ พยากรณ์ฝนฟรุ้งฟริ้ง ✨",
         howTitle: "❓ วิธีใช้งาน (How to use)",
         howText: "1. สมัครใช้งานที่ <a href='https://app.tomorrow.io/signin' target='_blank'>Tomorrow.io</a><br>" +
                  "2. ไปที่หน้า <a href='https://app.tomorrow.io/development/keys' target='_blank'>API Keys</a><br>" +
@@ -130,6 +130,8 @@ async function getRainForecast() {
 
         document.getElementById('resultBody').innerHTML = html;
         document.getElementById('resultTable').style.display = 'table';
+        document.getElementById('resultTable').scrollIntoView({ behavior: 'smooth', block: 'start' });//เลื่อนจอลงไปเองแบบเกร๋ๆ
+
     } catch (error) {
         alert(translations[currentLang].error);
     }
