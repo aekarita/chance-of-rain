@@ -1,4 +1,6 @@
-
+Changelog v1.0.1
+- แก้การแสดงผลภาษาไทยไม่ให้ตกบันทัดตัดคำไม่สวย Fix Display thai language
+========
 🌦️ Changelog: พยากรณ์ฝนฟรุ้งฟริ้ง ✨
 Version 1.0.0 (Released: 2026-05-20)
 

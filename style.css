@@ -220,4 +220,9 @@ tr:nth-child(even) { background: #fff5f7; }
         bottom: 3px;
         left: 10px;
     }
+    h1 {
+        font-size: 22px; /* ลดขนาดจากเดิมที่น่าจะเป็น 28-32px ลงมา */
+        white-space: nowrap; /* บังคับไม่ให้ตัดบรรทัด */
+        margin: 10px 0;
+    }
 }
