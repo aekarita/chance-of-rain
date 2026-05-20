@@ -170,8 +170,20 @@ tr:nth-child(even) { background: #fff5f7; }
 .small-btn:hover {
     background: var(--primary-pink);
     color: white;
+    transform: scale(1.2); /* ขยายเล็กน้อยเวลาเอาเมาส์ไปชี้ */
 }
 
 .hit-counter {
     margin-top: 5px;
+}
+
+.octocat-icon {
+    width: 35px;       /* ปรับขนาดความกว้างตามต้องการ */
+    height: 35px;      /* ปรับขนาดความสูงตามต้องการ */
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+.octocat-icon:hover {
+    transform: scale(1.8); /* ขยายเล็กน้อยเวลาเอาเมาส์ไปชี้ */
 }

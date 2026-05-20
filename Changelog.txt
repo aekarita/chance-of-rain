@@ -1,3 +1,5 @@
+v0.99206 19.55 20/05/2026
+- add github icon and sponser button
 =======
 v0.99205 20:14 19/05/2026
 - Can memo last use language จำภาษาที่ใช้งานล่าสุดได้แล้ว
